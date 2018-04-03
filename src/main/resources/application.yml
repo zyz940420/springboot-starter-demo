@@ -1,0 +1,68 @@
+com:
+  yuzhou:
+    opensource:
+      name: yuzhou
+      website: www.baidu.com
+      language: java
+# #############################################
+#
+# server 服务端配置
+#
+###############################################
+#端口,路径,指定错误页,session超时，指定ip
+server:
+  port: 8088
+  servlet:
+    context-path: /yuzhou
+    session:
+      timeout: 60   
+  error:
+    path: /error
+  address: 127.0.0.1
+# #############################################
+#
+# server - tomcat 常用配置
+#
+###############################################
+#编码格式，日志和Dump文件，日志格式
+  tomcat:
+    uri-encoding: UTF-8
+    basedir: D:/test
+    accesslog:
+      enabled: true
+      pattern: 
+      directory: 
+###############################################
+#
+# freemarker 常用配置
+#
+###############################################
+spring:
+  freemarker:
+    template-loader-path: classpath:/templates/
+    cache: false
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html; charset=utf-8
+    expose-request-attributes: true
+    expose-session-attributes: true
+    request-context-attribute: request
+    suffix: .ftl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
