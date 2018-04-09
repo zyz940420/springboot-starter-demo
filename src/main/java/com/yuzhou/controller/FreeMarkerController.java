@@ -20,7 +20,7 @@ public class FreeMarkerController {
 		return "freemarker/index";
 	}
 
-	@RequestMapping("/center")
+	@RequestMapping(value = "/center")
 	public String center() {
 		return "freemarker/center/center";
 	}
