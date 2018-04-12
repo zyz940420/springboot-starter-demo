@@ -64,7 +64,49 @@ spring:
     mode: HTML5
     encoding: UTF-8
     cache: false
-  
+#数据源
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    druid:
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+ #redis
+  redis:
+    database: 1
+    host: localhost
+    port: 6379
+    password: 
+    timeout: 10000
+###############################################
+#热部署
+#restart:
+#  include: 
+#    mapper: /mapper-[\\w\\.]+jar
+#    pagehelper: /pagehelper-[\\w\\.]+jar
+
+mybatis:
+    type-aliases-package: com.yuzhou.pojo
+    mapper-locations: classpath:mapper/*.xml
+
+mapper:
+    mappers:
+        - com.yuzhou.util.Mymapper
+    not-empty: false
+    identity: MYSQL
+
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+   
+
+      
        
     
 
